@@ -81,7 +81,7 @@ describe('Verify Create an Account', () => {
         createAccountPage.getPasswordErrorMessageLessThan8Characters()
 
     })
-
+    //testcase ini masih di skip karena belum tau cara solvenya
     it.skip('Failed Create an Account - Password does not meet minimum requirement of 3 classes character', () => {
 
         //home page
