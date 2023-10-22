@@ -8,6 +8,18 @@
 // https://on.cypress.io/custom-commands
 // ***********************************************
 //
+
+// -- Pilih Product --
+Cypress.Commands.add('selectProductByName', (productName) => {
+    cy.get('#maincontent > div.columns > div.column.main > div.products.wrapper.grid.products-grid > ol') // selector product
+      .contains(productName)
+      .click();
+  });
+
+// -- List Product --
+Cypress.Commands.add('getProductList', () => {
+    return cy.get('#maincontent > div.columns > div.column.main > div.products.wrapper.grid.products-grid > ol');
+});
 //
 // -- This is a parent command --
 // Cypress.Commands.add('login', (email, password) => { ... })

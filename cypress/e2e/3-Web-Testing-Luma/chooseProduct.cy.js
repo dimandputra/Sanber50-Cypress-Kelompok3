@@ -22,5 +22,29 @@ describe('Verify Login', () => {
 
         productPage.checkURL()
     })
+
+    it('Choose Product Success without login', () => {
+        const selectedProductName = 'Juno Jacket'; // nama produk pada list product *harus sesuai
+
+        productPage.productPageUrl()
+        cy.wait(2000) // tunggu 2 detik
+        productPage.getProductList()
+        .should('be.visible');
+        cy.wait(2000)
+        productPage.selectProductByName(selectedProductName)
+      });
+      it('Validating Successful Product Selection and URL Slug', () => {
+        const selectedProductName = 'Jade Yoga Jacket';
+
+        productPage.productPageUrl()
+        cy.wait(2000)
+        productPage.getProductList()
+        .should('be.visible');
+        cy.wait(1000) 
+        productPage.selectProductByName(selectedProductName)
+        productPage.checkProductURLandTitle(selectedProductName);
+      });
+    
 }
 )
+
