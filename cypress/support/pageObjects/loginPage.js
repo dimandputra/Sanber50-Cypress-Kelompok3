@@ -23,5 +23,6 @@ class loginPage{
         cy.get(this.signinBtn).click()
         cy.get('.title').should('be.visible') 
     }
+    
 }
 export default new loginPage()
