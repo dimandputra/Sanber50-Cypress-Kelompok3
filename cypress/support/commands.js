@@ -20,7 +20,12 @@ Cypress.Commands.add('selectProductByName', (productName) => {
 Cypress.Commands.add('getProductList', () => {
     return cy.get('#maincontent > div.columns > div.column.main > div.products.wrapper.grid.products-grid > ol');
 });
-//
+
+// -- Login Custom -- 
+Cypress.Commands.add ('Ketik', (locator, value) => {
+  cy.get(locator).clear().type(value)
+})
+
 // -- This is a parent command --
 // Cypress.Commands.add('login', (email, password) => { ... })
 //
