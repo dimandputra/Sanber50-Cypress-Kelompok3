@@ -3,7 +3,7 @@ import accountPage from "../../support/pageObjects/accountPage";
 
 describe('Verify Log Out', () =>{
     it('Success Log Out', () => {
-        loginPage.login()
+        LoginPage.login()
         cy.wait(3000)
         accountPage.clikProfileMenu()
         accountPage.clickSignOut()
