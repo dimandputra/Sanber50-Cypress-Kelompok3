@@ -1,4 +1,4 @@
-import homePage2 from "../../support/pageObjects/homePage2"
+import homePage from "../../support/pageObjects/homePage"
 import loginPage from "../../support/pageObjects/loginPage"
 import productPage from "../../support/pageObjects/productPage"
 import RandomData from "../../support/test-Data/randomData"
@@ -14,7 +14,7 @@ describe('Verify Login', () => {
 
     it('Choose Product Success', () => {
         
-        homePage2.clickSignin()
+        homePage.clickSignin()
 
         loginPage.inputEmail2('rizkigoal23@gmail.com')
         loginPage.inputPassword2('Rizkipebrian123')
