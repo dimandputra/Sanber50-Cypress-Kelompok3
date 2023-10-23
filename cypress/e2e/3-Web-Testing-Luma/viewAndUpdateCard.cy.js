@@ -1,0 +1,16 @@
+describe('View and Update Shopping Cart on Magento', () => {
+    it('views and updates the shopping cart', () => {
+        cy.visit('https://magento.softwaretestingboard.com/customer/account/login')
+        cy.get('#email').type('montanagurning913@gmail.com')
+        cy.get('.login-container > .block-customer-login > .block-content > #login-form > .fieldset > .password > .control > #pass').type('@Montanasanbercode50')
+        cy.get('.login-container > .block-customer-login > .block-content > #login-form > .fieldset > .actions-toolbar > div.primary > #send2').click()
+        cy.wait(6000)
+        cy.get('.showcart').click()
+        cy.get('.odd > :nth-child(1) > .product-item-details > .actions > .primary > .action').click() 
+        cy.wait(6000)
+        cy.get('#option-label-size-143-item-166').click()
+        cy.get('#option-label-color-93-item-57').click()
+        cy.wait(6000)
+        cy.get('#product-updatecart-button').click()
+    })
+})
