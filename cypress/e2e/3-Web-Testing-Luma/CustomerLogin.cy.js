@@ -19,7 +19,7 @@ describe('Verify Login', () => {
         cy.visit('https://magento.softwaretestingboard.com/customer/account/login')
         cy.get(loginPage.emailAddressField).type('achmadnur.iqballll@gmail.com')
         //Custom Login
-        cy.Ketik(loginPage.passwordField, '1234')
+        cy.Ketik(loginPage.passwordField, 'qwertyuiop1234')
         cy.get(loginPage.signinBtn).click()
         cy.get('.message-error > div').should('contain.text', 'The account sign-in was incorrect or your account is disabled temporarily. Please wait and try again later.') 
     })
